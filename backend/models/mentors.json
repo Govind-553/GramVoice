@@ -1,0 +1,20 @@
+[
+  {
+    "id": "m1",
+    "name": "Anjali",
+    "bio": "Helps students interested in software development and coding in Hindi.",
+    "language": "hi"
+  },
+  {
+    "id": "m2",
+    "name": "Ravi",
+    "bio": "Mentors those interested in mechanical engineering and practical design.",
+    "language": "mr"
+  },
+  {
+    "id": "m3",
+    "name": "Fatima",
+    "bio": "Guides students passionate about entrepreneurship and small business startups.",
+    "language": "bn"
+  }
+]
