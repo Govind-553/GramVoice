@@ -5,6 +5,8 @@ import VoicePlayer from './components/VoicePlayer';
 import LanguageSelector from './components/LanguageSelector';
 import axios from 'axios';
 
+import { db, ref, push } from './firebase/firebaseConfig';
+
 function App() {
   const [transcript, setTranscript] = useState('');
   const [mentor, setMentor] = useState(null);
@@ -13,13 +15,25 @@ function App() {
   const handleTranscript = async (text) => {
     try {
       setTranscript(text);
+
+      // Match mentor via backend
       const res = await axios.post('http://localhost:5000/match', {
         transcript: text,
-        language: language  // Ensure backend knows which language was used
+        language: language
       });
+
       setMentor(res.data);
+
+      // Store session in Firebase
+      const sessionRef = ref(db, 'sessions/');
+      push(sessionRef, {
+        transcript: text,
+        mentor: res.data.mentor_name,
+        language: language,
+        timestamp: Date.now()
+      });
     } catch (error) {
-      console.error('Error fetching mentor data:', error);
+      console.error('Error processing transcript:', error);
       setMentor(null);
     }
   };
