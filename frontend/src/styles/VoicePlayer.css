@@ -1,0 +1,10 @@
+.play-btn {
+  margin-top: 1rem;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}

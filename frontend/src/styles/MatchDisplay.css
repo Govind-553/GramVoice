@@ -1,0 +1,19 @@
+.match-display {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.mentor-card {
+  background-color: #e3f2fd;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-left: 6px solid #1a73e8;
+  border-radius: 8px;
+}
+
+.mentor-card h3 {
+  margin: 0;
+  color: #1a73e8;
+}

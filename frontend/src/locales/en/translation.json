@@ -1,0 +1,13 @@
+{
+  "record_section_heading": "🎙 Record Your Question",
+  "record_section_instruction": "Select your preferred language and speak your query clearly.",
+  "language_label": "Language:",
+  "start": "Start",
+  "stop": "Stop",
+  "recording_in_progress": "Recording in progress...",
+  "transcribing": "Transcribing... Please wait.",
+  "what_you_said": "What you said:",
+  "transcript_match_heading": "Transcript & Match",
+  "mentor_matched": "Matched Mentor:",
+  "play_mentor_response": "Play Mentor Response"
+}

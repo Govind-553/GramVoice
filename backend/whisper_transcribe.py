@@ -7,4 +7,4 @@ language = sys.argv[2] if len(sys.argv) > 2 else 'hi'
 model = whisper.load_model("base")
 result = model.transcribe(file_path, language=language)
 
-print(result["text"])       
+sys.stdout.buffer.write(result["text"].encode('utf-8'))  

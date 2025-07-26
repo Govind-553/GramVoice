@@ -1,16 +1,61 @@
-.container {
-  padding: 20px;
-  text-align: center;
+.recorder-container {
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
 }
-button {
-  margin: 5px;
+
+.lang-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+select {
+  margin-left: 0.5rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.button-group {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+}
+
+.record-btn,
+.stop-btn {
   padding: 10px 20px;
-  background-color: #ff4081;
-  color: white;
   border: none;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
 }
-button:disabled {
-  background-color: grey;
-  cursor: not-allowed;
+
+.record-btn {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.stop-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.recording-text {
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.loading-text {
+  color: #f57c00;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.audio-preview {
+  margin-top: 1rem;
 }

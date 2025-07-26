@@ -1,0 +1,8 @@
+.language-selector {
+  margin-bottom: 1.5rem;
+}
+
+.language-selector label {
+  font-weight: 600;
+  font-size: 1rem;
+}
