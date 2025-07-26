@@ -1,8 +1,8 @@
 import sys
 import json
 import numpy as np
-from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+from sentence_transformers import SentenceTransformer
 
 transcript = sys.argv[1]  # input text
 
