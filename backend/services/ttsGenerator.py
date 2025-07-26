@@ -1,19 +1,10 @@
 import sys
-from TTS.api import TTS
+from gtts import gTTS
 
-# Inputs
+# Get input from Node.js
 text = sys.argv[1]
-language = sys.argv[2]  # e.g., hi, mr, bn
+lang = sys.argv[2]  # 'hi', 'mr', 'bn', etc.
 
-# Choose a pre-trained multilingual model
-model_name = "tts_models/multilingual/multi-dataset/your_tts"
-
-tts = TTS(model_name=model_name, progress_bar=False)
-
-# Synthesize audio
-tts.tts_to_file(
-    text=text,
-    file_path="output/mentor_audio.wav",
-    speaker_wav=None,  # You can customize voice here
-    language=language
-)
+# Generate speech using gTTS
+tts = gTTS(text=text, lang=lang)
+tts.save("output/mentor_audio.mp3")
