@@ -42,7 +42,7 @@ function App() {
     <div style={{ padding: 20 }}>
       <h1>🎓 GramVoice: Voice Mentorship for Rural Youth</h1>
       <LanguageSelector language={language} setLanguage={setLanguage} />
-      <VoiceRecorder language={language} onTranscript={handleTranscript} />
+      <VoiceRecorder language={language} setLanguage={setLanguage} onTranscript={handleTranscript} />
       <MatchDisplay transcript={transcript} mentor={mentor} />
       {mentor?.bio && <VoicePlayer text={mentor.bio} language={language} />}
     </div>
