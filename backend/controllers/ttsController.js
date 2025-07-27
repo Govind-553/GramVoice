@@ -4,20 +4,16 @@ const path = require("path");
 exports.generateTTS = (req, res) => {
   const { responseText, language } = req.body;
 
-  // Handle empty input
-  if (!responseText || !language) {
-    return res.status(400).send({ error: "Text and language are required." });
-  }
+  const sanitizedText = responseText.replace(/"/g, '\\"');
+  const command = `python services/ttsGenerator.py "${sanitizedText}" "${language}"`;
 
-  const command = `python services/ttsGenerator.py "${responseText}" ${language}`;
-  
-  exec(command, (err) => {
+  exec(command, { encoding: 'buffer', maxBuffer: 1024 * 1024 * 5 }, (err, stdout) => {
     if (err) {
-      console.error("TTS Generation Error:", err.message);
-      return res.status(500).send({ error: "TTS generation failed." });
+      console.error("TTS Error:", err);
+      return res.status(500).json({ error: 'TTS failed' });
     }
 
-    const audioPath = path.join(__dirname, "../output/mentor_audio.mp3");
-    res.download(audioPath); 
+    res.setHeader('Content-Type', 'audio/mp3');
+    res.send(stdout); 
   });
 };

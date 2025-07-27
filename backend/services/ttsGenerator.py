@@ -1,10 +1,11 @@
 import sys
 from gtts import gTTS
 
-# Get input from Node.js
 text = sys.argv[1]
-lang = sys.argv[2]  # 'hi', 'mr', 'bn', etc.
+lang = sys.argv[2]
 
-# Generate speech using gTTS
 tts = gTTS(text=text, lang=lang)
-tts.save("output/mentor_audio.mp3")
+tts.save("output.mp3")
+
+with open("output.mp3", "rb") as f:
+    sys.stdout.buffer.write(f.read())

@@ -2,19 +2,55 @@
   {
     "id": "m1",
     "name": "Anjali",
-    "bio": "Helps students interested in software development and coding in Hindi.",
+    "bio": "Software developer and coding mentor with 5+ years of experience. Specializes in teaching Python and web development to beginners.",
     "language": "hi"
   },
   {
     "id": "m2",
     "name": "Ravi",
-    "bio": "Mentors those interested in mechanical engineering and practical design.",
+    "bio": "Mechanical engineer guiding rural students in practical design, CAD tools, and career readiness.",
     "language": "mr"
   },
   {
     "id": "m3",
     "name": "Fatima",
-    "bio": "Guides students passionate about entrepreneurship and small business startups.",
+    "bio": "Entrepreneurial coach focused on helping young people start their own small-scale businesses and financial literacy.",
     "language": "bn"
+  },
+  {
+    "id": "m4",
+    "name": "Suresh",
+    "bio": "Electrical engineer mentoring students in solar energy, wiring, and government skill programs.",
+    "language": "hi"
+  },
+  {
+    "id": "m5",
+    "name": "Priya",
+    "bio": "Digital marketing mentor helping students understand online branding, content creation, and social media strategy.",
+    "language": "en"
+  },
+  {
+    "id": "m6",
+    "name": "Megha",
+    "bio": "School teacher mentoring young girls on education continuity, scholarships, and basic computer skills.",
+    "language": "mr"
+  },
+  {
+    "id": "m7",
+    "name": "Rahul",
+    "bio": "Guides students in government job preparation, focusing on reasoning, general awareness, and practice papers.",
+    "language": "hi"
+  },
+  {
+    "id": "m8",
+    "name": "Rekha",
+    "bio": "Healthcare mentor providing knowledge on nursing careers, first aid, and health worker roles in rural areas.",
+    "language": "bn"
+  },
+  {
+    "id": "m9",
+    "name": "Deepak",
+    "bio": "Mentors students on mobile repair training and digital service entrepreneurship for self-employment.",
+    "language": "mr"
   }
 ]
